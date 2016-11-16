@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113140716) do
+ActiveRecord::Schema.define(version: 20161116140817) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20161113140716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "body"
+  end
+
+  create_table "todo_lists", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
