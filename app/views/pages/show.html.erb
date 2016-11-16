@@ -1,0 +1,8 @@
+
+<h2><%= @page.title %></h2>
+<p><%= @page.body %></p>
+
+<%= link_to "Back", pages_path %>
+<%= link_to "Edit", edit_page_path %>
+
+<%= link_to 'Delete', @page, method: :delete%>

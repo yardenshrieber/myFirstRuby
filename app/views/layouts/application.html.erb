@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyFirstRuby</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= yield(:head) %>
+
+  </head>
+
+  <body>
+    <div id="page">
+      <header>
+        <a href="/"><h2>YARDEN SHRIEBER</h2></a>
+        <ul>
+          <li><%= link_to 'Pages', pages_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+        </ul>
+      </header>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

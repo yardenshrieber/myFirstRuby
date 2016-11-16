@@ -1,0 +1,17 @@
+<%= form_for(@page) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "Your full name" %>
+    </div>
+    <div class="field">
+      <%= f.label :subject %>
+      <%= f.text_area :subject, placeholder: "Subject" %>
+    </div>
+    <div class="field">
+      <%= f.label :msg  %>
+      <%= f.text_field :msg, placeholder: "Enter your message" %>
+    </div>
+    <div>
+      <%= f.submit "Send" %>
+    </div>
+<% end %>
