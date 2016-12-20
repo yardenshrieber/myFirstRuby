@@ -13,6 +13,7 @@ class PagesController < ApplicationController
       render template: "pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found
+    end 
   end
 
 
