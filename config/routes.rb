@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :pages
 
-  get '/homepage', to: 'pages#homepage', as: 'homepage'
-  get '/about', to: 'pages#about', as: 'about'
+  get "/pages/:page" => "pages#show"
+
 
 end

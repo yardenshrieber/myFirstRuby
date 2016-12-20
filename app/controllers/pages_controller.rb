@@ -9,7 +9,10 @@ class PagesController < ApplicationController
 
 
   def show
-
+    if valid_page?
+      render template: "pages/#{params[:page]}"
+    else
+      render file: "public/404.html", status: :not_found
   end
 
 
@@ -62,6 +65,10 @@ class PagesController < ApplicationController
 # Methods who should be used only on this page
   private
     # Page parameters method (set what parameters is required to Add and Edit pages)
+
+    def valid_page?
+        File.exist?(Pathname.new(Rails.root + "app/views/pages/#{params[:page]}"))
+    end
 
     def page_params
       @page_params = params.require(:page).permit(:title, :body, :slug)
