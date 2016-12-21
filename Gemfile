@@ -45,10 +45,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5.2'
+  gem 'rspec-rails', '~>3.5.2'
 end
 group :test do
-  gem 'capybara', '>= 2.10.1'
+  gem 'capybara', '>=2.10.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
