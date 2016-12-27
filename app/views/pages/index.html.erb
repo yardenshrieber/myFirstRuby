@@ -1,7 +1,10 @@
 <h2>Pages:</h2>
 
 <% @pages.each do |page| %>
-    <p><%= link_to page.title, page  %></p>
+    <p  id="<%= dom_id(page) %>">
+      <%= link_to page.title, page  %>
+      <%= link_to page.created_at.strftime("%b %d, %Y"), page  %>
+    </p>
 <% end %>
 
 <%= link_to 'New Page', new_page_path %>

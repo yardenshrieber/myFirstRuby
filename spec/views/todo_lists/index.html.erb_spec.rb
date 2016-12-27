@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe "todo_lists/index", type: :view do
   before(:each) do
